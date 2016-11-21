@@ -20,6 +20,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skv-4V-9oj">
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" image="recordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9Q-2I-ZyJ"/>
@@ -29,6 +31,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="zJv-DC-XsP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" image="stopRecordingButton"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r8a-EP-qFJ"/>
@@ -40,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pitch Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-OE-eHS">
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,13 +51,13 @@
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PLd-zM-xcg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9U-ao-iRa"/>
-                            <constraint firstItem="PLd-zM-xcg" firstAttribute="top" secondItem="O83-SA-Zac" secondAttribute="bottom" constant="16.5" id="Gjk-JA-ai1"/>
+                            <constraint firstItem="PLd-zM-xcg" firstAttribute="top" secondItem="O83-SA-Zac" secondAttribute="bottom" constant="8" id="Gjk-JA-ai1"/>
                             <constraint firstItem="Skv-4V-9oj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MQq-C7-Thp"/>
-                            <constraint firstItem="O83-SA-Zac" firstAttribute="top" secondItem="Skv-4V-9oj" secondAttribute="bottom" constant="16.5" id="UcW-40-gbX"/>
+                            <constraint firstItem="O83-SA-Zac" firstAttribute="top" secondItem="Skv-4V-9oj" secondAttribute="bottom" constant="10" id="UcW-40-gbX"/>
                             <constraint firstItem="O83-SA-Zac" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTk-X0-Q52"/>
                             <constraint firstItem="eY9-OE-eHS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNL-EF-cSE"/>
                             <constraint firstItem="Skv-4V-9oj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gzV-hq-dnn"/>
-                            <constraint firstItem="Skv-4V-9oj" firstAttribute="top" secondItem="eY9-OE-eHS" secondAttribute="bottom" constant="40" id="kw3-fO-01T"/>
+                            <constraint firstItem="Skv-4V-9oj" firstAttribute="top" secondItem="eY9-OE-eHS" secondAttribute="bottom" constant="20" id="kw3-fO-01T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lxu-s9-UwT"/>
