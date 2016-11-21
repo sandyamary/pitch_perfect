@@ -26,15 +26,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func recordAudio(_ sender: AnyObject) {
-        tapToRecordLabel.text = "Recording in progress"
-        recordButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
+        configureUI(recording: true)
         
         //code for recording audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -53,12 +46,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(_ sender: AnyObject) {
-        tapToRecordLabel.text = "Tap to Record"
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
+        configureUI(recording: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+    }
+    
+    func configureUI(recording: Bool){
+        // Set label
+        tapToRecordLabel.text =
+            recording ? "Recording in progress" : "Tap to Record"
+        
+        // Set buttons
+        recordButton.isEnabled = !recording
+        stopRecordingButton.isEnabled = recording
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +69,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         print("AVAudioRecorder finished saving the recording")
         if (flag) {
-            self.performSegue(withIdentifier: "doneRecording", sender: audioRecorder.url)   }
+            performSegue(withIdentifier: "doneRecording", sender: audioRecorder.url)   }
         else {
             print("saving of the recording failed")
         }
