@@ -59,6 +59,14 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        //set up buttons for alignment in landscape mode
+        slowPlaybackButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        fastPlaybackButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        chipmunkButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        darthvadorPlaybackButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        echoButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        reverbButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
